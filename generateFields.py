@@ -20,9 +20,10 @@ def createField(Field, Title, Description, Image, URL):
         a.meta(charset='utf-8')
         a.meta(property='og:title', content=Title)
         a.meta(property='og:description', content=Description)
-        a.meta(property="og:site_name", content=URL) #rshaman.com
+        a.meta(property="og:site_name", content=URL)
         a.meta(property='og:url', content=URL)
         a.meta(property='og:image', content='https://niseko.github.io/rshaman/images/'+Image)
+        a.meta(property="og:footer", content='rshaman.com')
         a.meta(content='0; URL='+URL, **{'http-equiv': 'refresh'})
         a.meta(content='#0070DD', name="theme-color")
         #a.meta(name="twitter:card", content="summary_large_image")
