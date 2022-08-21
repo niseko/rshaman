@@ -24,7 +24,7 @@ def createField(Field, Title, Description, Image, URL):
         a.meta(property='og:url', content=URL)
         a.meta(property='og:image', content='https://niseko.github.io/rshaman/images/'+Image)
         a.meta(content='0; URL='+URL, **{'http-equiv': 'refresh'})
-        a.meta(content='#43B581', name="theme-color")
+        a.meta(content='#0070DD', name="theme-color")
         #a.meta(name="twitter:card", content="summary_large_image")
         a.link(href=URL, rel='canonical')
 
