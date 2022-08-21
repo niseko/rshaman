@@ -11,6 +11,8 @@ for sf in subfolders:
 
 def createField(Field, Title, Description, Image, URL):
     Field = Field.lower()
+    if not Image:
+        Image = "aglogo.png"
     a = Airium()
     a('<!DOCTYPE html>')
     with a.head():
@@ -23,7 +25,7 @@ def createField(Field, Title, Description, Image, URL):
         a.meta(property='og:image', content='https://niseko.github.io/rshaman/images/'+Image)
         a.meta(content='0; URL='+URL, **{'http-equiv': 'refresh'})
         a.meta(content='#43B581', name="theme-color")
-        a.meta(name="twitter:card", content="summary_large_image")
+        #a.meta(name="twitter:card", content="summary_large_image")
         a.link(href=URL, rel='canonical')
 
     try:
@@ -42,11 +44,3 @@ for key in data:
     createField(key, value['Title'], value['Description'], value['Image'], value['URL'])
     for syn in value['Synonyms']:
         createField(syn, value['Title'], value['Description'], value['Image'], value['URL'])
-
-
-
-    
-
-
-
-#print (html)
