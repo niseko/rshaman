@@ -1,7 +1,7 @@
 {
   "qe": {
     "Title": "QuestionablyEpic",
-    "Description": "This is indeed a website.",
+    "Description": "Is it questionable, or epic?",
     "Image": "",
     "URL": "https://questionablyepic.com/",
     "Synonyms": ["QuestionablyEpic"]
@@ -13,8 +13,15 @@
     "URL": "https://questionablyepic.com/live/",
     "Synonyms": ["qel", "questionablyepiclive"]
   },
+  "trinkets": {
+    "Title": "QuestionablyEpic Live",
+    "Description": "Optimize your healers gear using cutting edge mold and theorycrafting.",
+    "Image": "",
+    "URL": "https://questionablyepic.com/live/trinkets",
+    "Synonyms": ["trinket"]
+  },
   "parsing": {
-    "Title": "Why Healing Parses Don'T Matter",
+    "Title": "Why Healing Parses Don't Matter",
     "Description": "Excelling as a healer is about performing the role that your raid team requires to succeed in the encounter, to the best of your ability.",
     "Image": "",
     "URL": "https://mechanicalpriest.com/why-healing-parses-dont-matter/",

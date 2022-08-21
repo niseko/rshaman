@@ -3,13 +3,14 @@ import os.path
 import shutil
 from airium import Airium
 
-
 with open("fields.json") as file:
     data = json.load(file)
 
+# this won't clean up anything
+# deleted from the list, but
+# it also doesn't delete random stuff
 for key in data:
     shutil.rmtree(key, 1)
-
 
 def createField(Field, Title, Description, Image, URL):
     Field = Field.lower()
@@ -38,10 +39,33 @@ def createField(Field, Title, Description, Image, URL):
     with open(os.path.join(Field, "index.html"), "w") as f:
         f.write(str(a))
 
-
-
 for key in data:
     value = data[key]
     createField(key, value['Title'], value['Description'], value['Image'], value['URL'])
     for syn in value['Synonyms']:
         createField(syn, value['Title'], value['Description'], value['Image'], value['URL'])
+
+# Create an overview of all available links
+a = Airium()
+a('<!DOCTYPE html>')
+with a.head():
+    a.title(_t="rshaman.com")
+    a.meta(charset='utf-8')
+    a.meta(property='og:title', content="Overview")
+    a.meta(property='og:description', content="Description")
+    a.meta(property="og:site_name", content="rshaman.com")
+    a.meta(property='og:url', content="rshaman.com")
+    a.meta(property='og:image', content='https://niseko.github.io/rshaman/images/aglogo.png')
+    a.meta(content='#0070DD', name="theme-color")
+    #a.meta(name="twitter:card", content="summary_large_image")
+with a.body():
+    with a.ul():
+        for key in data:
+            value = data[key]
+            with a.li():
+                a(key + ": ")
+                with a.a(href=value['URL']):
+                    a(value['Title'])
+
+with open("index.html", "w") as f:
+    f.write(str(a))
