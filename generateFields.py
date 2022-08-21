@@ -3,7 +3,7 @@ import os.path
 import shutil
 from airium import Airium
 
-allowlist = [".\\.git", ".\\Images"]
+allowlist = [".\\.git", ".\\images"]
 subfolders = [ f.path for f in os.scandir() if f.is_dir() ]
 for sf in subfolders:
     if sf not in allowlist:
@@ -19,7 +19,7 @@ def createField(Field, Title, Description, Image, URL):
         a.meta(content='Resto Title', property='og:title')
         a.meta(content=Description, property='og:description')
         a.meta(content=URL, property='og:url')
-        #a.meta(content='Images/'+Image, property='og:image')
+        a.meta(content='https://niseko.github.io/rshaman/images/'+Image, property='og:image')
         a.meta(content='0; URL='+URL, **{'http-equiv': 'refresh'})
         a.meta(content='#43B581', name="theme-color")
         a.link(href=URL, rel='canonical')

@@ -2,14 +2,14 @@
   "qe": {
     "Title": "QuestionablyEpic",
     "Description": "This is indeed a website.",
-    "Image": "",
+    "Image": "spell_nature_healingwavegreater.jpg",
     "URL": "https://questionablyepic.com/",
     "Synonyms": ["QuestionablyEpic"]
   },
   "qelive": {
     "Title": "QuestionablyEpic Live",
     "Description": "Optimize your healers gear using cutting edge mold and theorycrafting.",
-    "Image": "",
+    "Image": "spell_nature_healingwavelesser.jpg",
     "URL": "https://questionablyepic.com/live/",
     "Synonyms": ["qel", "questionablyepiclive"]
   }
