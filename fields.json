@@ -19,11 +19,12 @@
     ]
   },
   "trinkets": {
-    "Title": "QuestionablyEpic Live",
+    "Title": "QuestionablyEpic Live: Trinkets",
     "Description": "Optimize your healers gear using cutting edge mold and theorycrafting.",
     "URL": "https://questionablyepic.com/live/trinkets",
     "Synonyms": [
-      "trinket"
+      "trinket",
+      "qe/trinkets"
     ]
   },
   "parsing": {
@@ -34,5 +35,11 @@
       "howtoparse",
       "parse"
     ]
+  },
+  "wowhead": {
+    "Title": "Wowhead",
+    "Description": "Wowhead Rshaman Guide",
+    "URL": "https://www.wowhead.com/restoration-shaman-guide",
+    "Synonyms": []
   }
 }
