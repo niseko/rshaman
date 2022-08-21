@@ -4,6 +4,8 @@
     lowerCaseURL = currentURL.toLowerCase();
     if (currentURL != lowerCaseURL) {
       location.replace(lowerCaseURL);
+    } else {
+      location.replace(window.location.origin);
     }
   };
 </script>
