@@ -1,0 +1,16 @@
+{
+  "qe": {
+    "Title": "QuestionablyEpic",
+    "Description": "This is indeed a website.",
+    "Image": "",
+    "URL": "https://questionablyepic.com/",
+    "Synonyms": ["QuestionablyEpic"]
+  },
+  "qelive": {
+    "Title": "QuestionablyEpic Live",
+    "Description": "Optimize your healers gear using cutting edge mold and theorycrafting.",
+    "Image": "",
+    "URL": "https://questionablyepic.com/live/",
+    "Synonyms": ["qel", "questionablyepiclive"]
+  }
+}
