@@ -3,11 +3,13 @@ import os.path
 import shutil
 from airium import Airium
 
-allowlist = [".\\.git", ".\\images"]
-subfolders = [ f.path for f in os.scandir() if f.is_dir() ]
-for sf in subfolders:
-    if sf not in allowlist:
-        shutil.rmtree(sf)
+
+with open("fields.json") as file:
+    data = json.load(file)
+
+for key in data:
+    shutil.rmtree(key, 1)
+
 
 def createField(Field, Title, Description, Image, URL):
     Field = Field.lower()
@@ -23,7 +25,6 @@ def createField(Field, Title, Description, Image, URL):
         a.meta(property="og:site_name", content=URL)
         a.meta(property='og:url', content=URL)
         a.meta(property='og:image', content='https://niseko.github.io/rshaman/images/'+Image)
-        a.meta(property="og:footer", content='rshaman.com')
         a.meta(content='0; URL='+URL, **{'http-equiv': 'refresh'})
         a.meta(content='#0070DD', name="theme-color")
         #a.meta(name="twitter:card", content="summary_large_image")
@@ -37,8 +38,7 @@ def createField(Field, Title, Description, Image, URL):
     with open(os.path.join(Field, "index.html"), "w") as f:
         f.write(str(a))
 
-with open("fields.json") as file:
-    data = json.load(file)
+
 
 for key in data:
     value = data[key]

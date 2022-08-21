@@ -12,5 +12,12 @@
     "Image": "",
     "URL": "https://questionablyepic.com/live/",
     "Synonyms": ["qel", "questionablyepiclive"]
+  },
+  "parsing": {
+    "Title": "Why Healing Parses Don'T Matter",
+    "Description": "Excelling as a healer is about performing the role that your raid team requires to succeed in the encounter, to the best of your ability.",
+    "Image": "",
+    "URL": "https://mechanicalpriest.com/why-healing-parses-dont-matter/",
+    "Synonyms": ["howtoparse", "parse"]
   }
 }
