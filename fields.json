@@ -2,7 +2,6 @@
   "qe": {
     "Title": "QuestionablyEpic",
     "Description": "Is it questionable, or epic?",
-    "Image": "",
     "URL": "https://questionablyepic.com/",
     "Synonyms": [
       "QuestionablyEpic"
@@ -11,7 +10,6 @@
   "qelive": {
     "Title": "QuestionablyEpic Live",
     "Description": "Optimize your healers gear using cutting edge mold and theorycrafting.",
-    "Image": "",
     "URL": "https://questionablyepic.com/live/",
     "Synonyms": [
       "qel",
@@ -23,7 +21,6 @@
   "trinkets": {
     "Title": "QuestionablyEpic Live",
     "Description": "Optimize your healers gear using cutting edge mold and theorycrafting.",
-    "Image": "",
     "URL": "https://questionablyepic.com/live/trinkets",
     "Synonyms": [
       "trinket"
@@ -32,7 +29,6 @@
   "parsing": {
     "Title": "Why Healing Parses Don't Matter",
     "Description": "Healing parses don't matter because pure HPS isn't a measure of effectiveness, skill and performance. Healing is about success as a healing and raid team.",
-    "Image": "",
     "URL": "https://mechanicalpriest.com/why-healing-parses-dont-matter/",
     "Synonyms": [
       "howtoparse",
