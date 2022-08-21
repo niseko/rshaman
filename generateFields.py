@@ -20,6 +20,7 @@ def createField(Field, Title, Description, Image, URL):
         a.meta(content=URL, property='og:url')
         #a.meta(content='Images/'+Image, property='og:image')
         a.meta(content='0; URL='+URL, **{'http-equiv': 'refresh'})
+        a.meta(content='#43B581', name="theme-color")
         a.link(href=URL, rel='canonical')
 
     try:
