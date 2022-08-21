@@ -16,12 +16,14 @@ def createField(Field, Title, Description, Image, URL):
     with a.head():
         a.title(_t=Title)
         a.meta(charset='utf-8')
-        a.meta(content='Resto Title', property='og:title')
-        a.meta(content=Description, property='og:description')
-        a.meta(content=URL, property='og:url')
-        a.meta(content='https://niseko.github.io/rshaman/images/'+Image, property='og:image')
+        a.meta(property='og:title', content=Title)
+        a.meta(property='og:description', content=Description)
+        a.meta(property="og:site_name", content=URL) #rshaman.com
+        a.meta(property='og:url', content=URL)
+        a.meta(property='og:image', content='https://niseko.github.io/rshaman/images/'+Image)
         a.meta(content='0; URL='+URL, **{'http-equiv': 'refresh'})
         a.meta(content='#43B581', name="theme-color")
+        a.meta(name="twitter:card", content="summary_large_image")
         a.link(href=URL, rel='canonical')
 
     try:
