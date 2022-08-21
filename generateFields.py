@@ -10,6 +10,7 @@ for sf in subfolders:
         shutil.rmtree(sf)
 
 def createField(Field, Title, Description, Image, URL):
+    Field = Field.lower()
     a = Airium()
     a('<!DOCTYPE html>')
     with a.head():
