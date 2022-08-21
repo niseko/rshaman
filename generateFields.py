@@ -52,20 +52,26 @@ with a.head():
     a.title(_t="rshaman.com")
     a.meta(charset='utf-8')
     a.meta(property='og:title', content="Overview")
-    a.meta(property='og:description', content="Description")
+    a.meta(property='og:description', content="A list of available forwardings.")
     a.meta(property="og:site_name", content="rshaman.com")
     a.meta(property='og:url', content="rshaman.com")
     a.meta(property='og:image', content='https://niseko.github.io/rshaman/images/aglogo.png')
     a.meta(content='#0070DD', name="theme-color")
-    #a.meta(name="twitter:card", content="summary_large_image")
 with a.body():
     with a.ul():
         for key in data:
             value = data[key]
             with a.li():
-                a(key + ": ")
-                with a.a(href=value['URL']):
-                    a(value['Title'])
+                a(key)
+                with a.ul():
+                    with a.li():
+                        a("Link: ")
+                        with a.a(href=value['URL']):
+                            a(value['Title'])
+                    with a.li():
+                        a("Description: " + value["Description"])
+                    with a.li():
+                        a("Synonyms: " + ", ".join(value["Synonyms"]))
 
 with open("index.html", "w") as f:
     f.write(str(a))
