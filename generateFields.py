@@ -59,20 +59,23 @@ with a.head():
     a.meta(content='#0070DD', name="theme-color")
     a.link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx", crossorigin="anonymous")
 with a.body():
-    with a.ul():
-        for key in data:
-            value = data[key]
-            with a.li():
-                a(key)
-                with a.ul():
-                    with a.li():
-                        a("Link: ")
-                        with a.a(href=value['URL']):
-                            a(value['Title'])
-                    with a.li():
-                        a("Description: " + value["Description"])
-                    with a.li():
-                        a("Synonyms: " + ", ".join(value["Synonyms"]))
+    with a.div(klass="container"):
+        with a.h1():
+            a("Overview")
+        with a.ul():
+            for key in data:
+                value = data[key]
+                with a.li():
+                    a(key)
+                    with a.ul():
+                        with a.li():
+                            a("Link: ")
+                            with a.a(href=value['URL']):
+                                a(value['Title'])
+                        with a.li():
+                            a("Description: " + value["Description"])
+                        with a.li():
+                            a("Synonyms: " + ", ".join(value["Synonyms"]))
 
 with open("index.html", "w") as f:
     f.write(str(a))
